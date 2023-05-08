@@ -47,7 +47,7 @@ function PriceFilter({ maxPrice }: { maxPrice: number }) {
         <div className="mv2">
           <div className="flex">
             <div className="flex-auto">
-              <div className="flex mb2 justify-center fw5">
+              <div className="flex mb-2 justify-center fw5">
                 ${values[0]} - ${values[1]}
               </div>
               <Slider.Root
@@ -55,18 +55,18 @@ function PriceFilter({ maxPrice }: { maxPrice: number }) {
                   setValues([values[0], values[1]]);
                   setVisible(true);
                 }}
-                className="flex items-center relative mw-100 slider"
+                className="relative flex items-center select-none touch-none w-full h-5"
                 value={values}
                 min={0}
                 max={maxPrice}
                 step={50}
                 minStepsBetweenThumbs={1}
               >
-                <Slider.Track className="slider__track bg-moon-gray relative flex-auto">
-                  <Slider.Range className="slider__range bg-light-purple" />
+                <Slider.Track className="bg-slate-300 relative grow rounded-full h-[3px]">
+                  <Slider.Range className="absolute bg-purple-600 rounded-full h-full" />
                 </Slider.Track>
-                <Slider.Thumb className="slider__thumb db w1 h1 bg-white br-100" />
-                <Slider.Thumb className="slider__thumb db w1 h1 bg-white br-100" />
+                <Slider.Thumb className="block w-5 h-5 bg-white shadow-[0_2px_10px] shadow-purple-600 rounded-[10px] hover:bg-violet3 focus:outline-none focus:shadow-[0_0_0_5px] focus:shadow-purple-600"/>
+                <Slider.Thumb className="block w-5 h-5 bg-white shadow-[0_2px_10px] shadow-purple-600 rounded-[10px] hover:bg-violet3 focus:outline-none focus:shadow-[0_0_0_5px] focus:shadow-purple-600" />
               </Slider.Root>
             </div>
           </div>

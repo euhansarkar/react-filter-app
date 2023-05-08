@@ -68,15 +68,15 @@ export default function ColorFilters() {
           return filteredColors.includes(f.value);
         })
         .map((field, key) => (
-          <li key={key} className="pv2">
-            <div className="flex items-center">
+          <li key={key} className="my-3">
+            <div className="flex gap-3">
               <Checkbox.Root
                 id={field.name}
                 name={field.name}
                 disabled={hasFilters}
                 onCheckedChange={onColorChange(field.value)}
                 checked={colors.includes(field.value)}
-                className="checkbox lh-solid flex items-center justify-center pa0 bg-white w125 h125 br2 bn"
+                className="checkbox  flex items-center justify-center rounded-md bg-white w-5 h-5"
               >
                 <Checkbox.Indicator>
                   <CheckIcon className="checkbox__icon w125 h125" />
