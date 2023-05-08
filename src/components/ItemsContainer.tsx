@@ -22,24 +22,22 @@ export default function ItemsContainer() {
               key={product.name}
               className="w-64 bg-white shadow-md rounded-lg overflow-hidden my-4"
             >
-              <a className="hover:text-purple-500" href="/t">
-                <div className="flex flex-col h-full">
-                  <img
-                    alt=""
-                    loading="lazy"
-                    className="w-full h-48 object-cover"
-                    src={product.src}
-                  />
+              <div className="flex flex-col h-full">
+                <img
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-48 object-cover"
+                  src={product.src}
+                />
 
-                  <div className="p-4">
-                    <b className="text-2xl font-bold mb-2">{product.name}</b>
-                    <i className="text-lg text-gray-600">
-                      {product.color.join(", ")}
-                    </i>
-                    <p className="text-black">${product.price / 100}</p>
-                  </div>
+                <div className="p-4">
+                  <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
+                  <i className="text-lg text-gray-600 block">
+                    {product.color.join(", ")}
+                  </i>
+                  <p className="text-black">Price: ${product.price / 100}</p>
                 </div>
-              </a>
+              </div>
             </div>
           );
         })}

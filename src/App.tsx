@@ -62,36 +62,41 @@ export default function App() {
 
       <div className="flex">
         <aside className="h-screen hidden md:block w-4/12 sticky top-6 bg-gray-200 overflow-auto">
-          <div style={{ position: "sticky", top: "20px" }}>
-            <ul className="list pa0 ma0 pb3 bb b--black-10">
-              <li className="f6 fw5 silver mb2">
+          <div className="sticky top-5 ">
+            <ul className="flex flex-col pa0 border-b-2 border-teal-200 ma0 pb3 bb b--black-10 w-10/12 mx-auto">
+              <li className="text-slate-400">
                 <div className="flex justify-between">
                   Filters
                   <span>{items.length} Products</span>
                 </div>
               </li>
-              <li>
+              <li className="my-2 flex justify-between">
                 <button className="btn bn fw5 pa0 pv2 w-100 tl bg-transparent hover-light-purple flex justify-between">
                   Bags
-                  <span>{itemCounts["bags"] ?? 0}</span>
                 </button>
+                <span>{itemCounts["bags"] ?? 0}</span>
               </li>
-              <li>
+              <li className="my-2 flex justify-between">
                 <button className="btn bn fw5 pa0 pv2 w-100 tl bg-transparent hover-light-purple flex justify-between">
                   Shoes
-                  <span>{itemCounts["shoes"] ?? 0}</span>
                 </button>
+                <span>{itemCounts["shoes"] ?? 0}</span>
               </li>
-              <li>
+              <li className="my-2 flex justify-between">
                 <button className="btn bn fw5 pa0 pv2 w-100 tl bg-transparent hover-light-purple flex justify-between">
                   Jackets
-                  <span>{itemCounts["jackets"] ?? 0}</span>
                 </button>
+                <span>{itemCounts["jackets"] ?? 0}</span>
               </li>
             </ul>
 
-            <ColorFilters />
+            <div className="border-b-2 border-teal-200 py-3 w-10/12 mx-auto">
+              <ColorFilters />
+            </div>
+
+            <div className="border-b-2 border-teal-200 py-3 w-10/12 mx-auto">
             <PriceFilter maxPrice={maxPrice} />
+            </div>
           </div>
         </aside>
 
